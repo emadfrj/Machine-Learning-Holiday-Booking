@@ -97,10 +97,6 @@ df = pd.get_dummies(df, columns=['flight_day'], drop_first=True)
 df = efficientOneHotencoding(df,'route',20,1000,0.2)
 df = efficientOneHotencoding(df,'booking_origin',20,1000,0.1)
 
-"""Check the final number of columns after encoding"""
-
-len(df.columns)
-
 """## Split dataset to train and test"""
 
 from sklearn.model_selection import train_test_split
